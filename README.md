@@ -4,7 +4,7 @@ Keeping track of your income and expenses*
 
 ---
 
-### Adding new stuff to this project
+### Making changes to this project
 
 The following rules should be applied if there is anything new going into this project.
 
