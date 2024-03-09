@@ -6,6 +6,6 @@ import org.springframework.http.HttpStatus
 
 sealed class CreateTransactionResponse(): ResponseHttpStatusCodeProvider {
     data object Created : CreateTransactionResponse() {
-        override fun statusCode(): HttpStatus = HttpStatus.CREATED
+        override fun status(): HttpStatus = HttpStatus.CREATED
     }
 }

@@ -1,7 +1,7 @@
 package de.rs.cafloma.app.api.core.response
 
-import org.springframework.http.HttpStatusCode
+import org.springframework.http.HttpStatus
 
 interface ResponseHttpStatusCodeProvider {
-    fun statusCode(): HttpStatusCode
+    fun status(): HttpStatus
 }

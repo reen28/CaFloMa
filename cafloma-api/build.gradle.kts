@@ -19,9 +19,17 @@ repositories {
 }
 
 dependencies {
+	// Spring Boot Core Dependencies
 	implementation("org.springframework.boot:spring-boot-starter-web")
+
+	// Validation Dependencies
+	implementation("org.springframework.boot:spring-boot-starter-validation")
+	implementation("jakarta.validation:jakarta.validation-api")
+
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+
+	// Test Dependencies
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
