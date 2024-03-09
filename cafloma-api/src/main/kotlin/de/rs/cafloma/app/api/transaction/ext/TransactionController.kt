@@ -1,7 +1,7 @@
-package de.rs.cafloma.app.api.transaction.out
+package de.rs.cafloma.app.api.transaction.ext
 
-import de.rs.cafloma.app.api.transaction.out.contexts.CreateTransactionContext
-import de.rs.cafloma.app.api.transaction.out.responses.CreateTransactionResponse
+import de.rs.cafloma.app.api.transaction.ext.contexts.CreateTransactionContext
+import de.rs.cafloma.app.api.transaction.ext.responses.CreateTransactionResponse
 import de.rs.cafloma.app.api.transaction.sys.TransactionService
 import jakarta.validation.Valid
 import org.springframework.web.bind.annotation.PostMapping

@@ -1,4 +1,4 @@
-package de.rs.cafloma.app.api.transaction.out.contexts
+package de.rs.cafloma.app.api.transaction.ext.contexts
 
 import jakarta.validation.constraints.Max
 import jakarta.validation.constraints.Min

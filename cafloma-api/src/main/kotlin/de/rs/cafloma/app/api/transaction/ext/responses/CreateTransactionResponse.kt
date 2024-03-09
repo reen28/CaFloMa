@@ -1,6 +1,6 @@
-package de.rs.cafloma.app.api.transaction.out.responses
+package de.rs.cafloma.app.api.transaction.ext.responses
 
-import de.rs.cafloma.app.api.core.response.ResponseHttpStatusCodeProvider
+import de.rs.cafloma.app.api.core.ext.response.ResponseHttpStatusCodeProvider
 import org.springframework.http.HttpStatus
 
 

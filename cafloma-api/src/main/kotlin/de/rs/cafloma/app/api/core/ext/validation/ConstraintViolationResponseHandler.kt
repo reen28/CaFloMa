@@ -1,4 +1,4 @@
-package de.rs.cafloma.app.api.core.validation
+package de.rs.cafloma.app.api.core.ext.validation
 
 import org.springframework.web.bind.MethodArgumentNotValidException
 import org.springframework.web.bind.annotation.ExceptionHandler
