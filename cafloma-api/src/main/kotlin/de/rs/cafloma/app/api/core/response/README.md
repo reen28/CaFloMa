@@ -23,7 +23,7 @@ sealed class CreateTransactionResponse(): ResponseHttpStatusCodeProvider {
 
 ```
 
-## How does *CaFloMa* mapping the http status code to http response?
+## How does *CaFloMa* map the http status code to http response?
 
 The http status code is mapped via a registered `ResponseBodyAdvice` using the method `beforeBodyWrite`. 
 The `ResponseBodyAdvice` supports every class that implements the interface `ResponseHttpStatusCodeProvider` in order 
