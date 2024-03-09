@@ -22,7 +22,7 @@ class ResponseHttpStatusCodeMapper: ResponseBodyAdvice<ResponseHttpStatusCodePro
         request: ServerHttpRequest,
         response: ServerHttpResponse
     ): ResponseHttpStatusCodeProvider? {
-        body?.let { response.setStatusCode(it.statusCode()) }
+        body?.let { response.setStatusCode(it.status()) }
         return body
     }
 }
