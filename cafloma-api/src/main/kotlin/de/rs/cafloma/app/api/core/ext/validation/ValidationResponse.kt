@@ -1,6 +1,6 @@
-package de.rs.cafloma.app.api.core.validation
+package de.rs.cafloma.app.api.core.ext.validation
 
-import de.rs.cafloma.app.api.core.response.ResponseHttpStatusCodeProvider
+import de.rs.cafloma.app.api.core.ext.response.ResponseHttpStatusCodeProvider
 import org.springframework.http.HttpStatus
 
 data class ValidationResponse(val constraintViolations: Set<String?>): ResponseHttpStatusCodeProvider {

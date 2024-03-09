@@ -1,4 +1,4 @@
-package de.rs.cafloma.app.api.core.response
+package de.rs.cafloma.app.api.core.ext.response
 
 import org.springframework.http.HttpStatus
 
