@@ -22,9 +22,12 @@ repositories {
 }
 
 dependencies {
+	//kotlin
+	implementation("org.jetbrains.kotlin:kotlin-reflect")
+
 	// spring boot core dependencies
 	implementation("org.springframework.boot:spring-boot-starter")
-	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("org.springframework.boot:spring-boot-starter-web")
 
 	// testing dependencies
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
