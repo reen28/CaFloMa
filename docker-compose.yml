@@ -1,0 +1,11 @@
+services:
+  cafloma-application: 
+    container_name: cafloma-application
+    build: 
+      context: ./cafloma
+      dockerfile: Dockerfile
+    environment:
+      - BOOT_PROFILE_GROUP=${BOOT_PROFILE_GROUP}
+      - PORT=${PORT}
+    ports:
+      - "${PORT}:${PORT}" # mapping host port to container port
