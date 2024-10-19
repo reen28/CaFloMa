@@ -6,6 +6,7 @@ plugins {
 	// versions
 	id("org.springframework.boot") version "3.3.4"
 	id("io.spring.dependency-management") version "1.1.6"
+	id("org.flywaydb.flyway") version "10.20.0"
 }
 
 group = "de.reen28"
@@ -32,6 +33,9 @@ dependencies {
 	// spring boot data jpa
 	runtimeOnly("org.postgresql:postgresql")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+	// flyway
+	implementation("org.flywaydb:flyway-core")
 
 	// testing dependencies
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
