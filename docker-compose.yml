@@ -6,12 +6,12 @@ services:
       dockerfile: Dockerfile
     environment:
       - BOOT_PROFILE_GROUP=${BOOT_PROFILE_GROUP}
-      - PORT=${PORT}
+      - PORT=${APP_PORT}
       - DB_NAME=jdbc:postgresql://cafloma-database:5432/postgres
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
     ports:
-      - "${PORT}:${PORT}"
+      - "${APP_PORT}:${APP_PORT}"
     depends_on:
       - cafloma-database
   cafloma-database:
