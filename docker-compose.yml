@@ -1,5 +1,8 @@
 services:
-  cafloma-application: 
+  cafloma-application:
+    networks:
+      - public
+      - private
     container_name: cafloma-application
     build: 
       context: ./cafloma
@@ -15,6 +18,8 @@ services:
     depends_on:
       - cafloma-database
   cafloma-database:
+    networks:
+      - private
     image: postgres:17-alpine
     environment:
       - POSTGRES_USER=${DB_USER}
@@ -23,3 +28,9 @@ services:
       - "${DB_PORT}:${DB_PORT}"
     volumes:
       - ~/apps/postgres:/var/lib/postgresql/data
+
+networks:
+  public:
+    driver: bridge
+  private:
+    driver: bridge
