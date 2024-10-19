@@ -7,7 +7,7 @@ services:
     environment:
       - BOOT_PROFILE_GROUP=${BOOT_PROFILE_GROUP}
       - PORT=${PORT}
-      - DB_NAME=${DB_NAME}
+      - DB_NAME=jdbc:postgresql://cafloma-database:${DB_PORT}/postgres
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
     ports:
@@ -17,10 +17,10 @@ services:
   cafloma-database:
     image: postgres:17-alpine
     environment:
-      - POSTGRES_DB=${DB_NAME:-}
-      - POSTGRES_USER=${DB_USER:-}
-      - POSTGRES_PASSWORD=${DB_PASS:-password}
+      - POSTGRES_DB=jdbc:postgresql://cafloma-database:${DB_PORT}/postgres
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
     ports:
-      - "${DB_PORT:-5432}:${DB_PORT:-5432}"
+      - "${DB_PORT}:${DB_PORT}"
     volumes:
       - ~/apps/postgres:/var/lib/postgresql/data

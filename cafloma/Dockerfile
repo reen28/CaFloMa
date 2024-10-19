@@ -22,9 +22,9 @@ FROM amazoncorretto:${JAVA_VERSION}
 WORKDIR /app
 
 # built jar
-# TODO move the jar file name into ARG variable
 COPY --from=builder /app/build/libs/*.jar cafloma-application.jar
 
+ENV SPRING_CONFIG_ADDITIONAL_LOCATION=optional:classpath:database/
+
 # start application
-# TODO move the jar file name into ARG variable
 ENTRYPOINT ["java", "-jar", "cafloma-application.jar"]
