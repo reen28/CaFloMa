@@ -5,12 +5,12 @@ services:
       - private
     container_name: cafloma-application
     build: 
-      context: ./cafloma
+      context: .
       dockerfile: Dockerfile
     environment:
       - BOOT_PROFILE_GROUP=${BOOT_PROFILE_GROUP}
       - APP_PORT=${APP_PORT}
-      - DB_NAME=jdbc:postgresql://cafloma-database:5432/postgres
+      - DB_URL=jdbc:postgresql://cafloma-database:${DB_PORT}/${DB_NAME}
       - DB_USER=${DB_USER}
       - DB_PASSWORD=${DB_PASSWORD}
     ports:
@@ -22,12 +22,16 @@ services:
       - private
     image: postgres:17-alpine
     environment:
+      - POSTGRES_DB=${DB_NAME}
       - POSTGRES_USER=${DB_USER}
       - POSTGRES_PASSWORD=${DB_PASSWORD}
     ports:
       - "${DB_PORT}:${DB_PORT}"
     volumes:
-      - ~/apps/postgres:/var/lib/postgresql/data
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
 
 networks:
   public:
