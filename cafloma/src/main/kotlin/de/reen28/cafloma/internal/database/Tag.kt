@@ -12,6 +12,7 @@ data class Tag(
     val name: String,
     val description: String,
 
+    // other table references
     @ManyToOne
     @JoinColumn(name = "account_id")
     val account: Account

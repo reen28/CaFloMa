@@ -18,6 +18,7 @@ data class StandingOrder(
     val frequency: Frequency,
     val nextExecutionAt: LocalDateTime,
 
+    // other table references
     @ManyToOne
     @JoinColumn(name = "account_id")
     val account: Account

@@ -5,6 +5,7 @@ import jakarta.persistence.Entity
 import jakarta.persistence.GeneratedValue
 import jakarta.persistence.GenerationType
 import jakarta.persistence.Id
+import jakarta.persistence.OneToMany
 import java.util.*
 
 @Entity
@@ -12,5 +13,8 @@ data class User(
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     var uuid: UUID, //could be some external id
-    //other attributes could be retrieved from external service
+
+    // other table references
+    @OneToMany(mappedBy = "ownedBy")
+    var accounts: List<Account>
 ): Auditable<User>()

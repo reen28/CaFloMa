@@ -16,6 +16,7 @@ data class Transaction(
     val amount: Amount,
     val executedAt: LocalDateTime,
 
+    // other table references
     @ManyToOne
     @JoinColumn(name = "account_id")
     val account: Account

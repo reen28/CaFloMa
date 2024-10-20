@@ -9,6 +9,10 @@ data class Account(
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     var uuid: UUID,
+
+    // other table references
+    @ManyToOne
+    @JoinColumn(name = "user_id")
     val ownedBy: User,
 
     @OneToMany(mappedBy = "account")

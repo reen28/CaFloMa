@@ -16,6 +16,7 @@ data class Budget(
     @Embedded
     val frequency: Frequency,
 
+    // other table references
     @ManyToOne
     @JoinColumn(name = "account_id")
     val account: Account
