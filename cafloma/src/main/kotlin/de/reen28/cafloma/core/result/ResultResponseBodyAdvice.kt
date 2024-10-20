@@ -9,6 +9,10 @@ import org.springframework.http.server.ServerHttpResponse
 import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice
 
+/**
+ * This class will ensure that the status code specified by [HttpStatusCodeResultCase]
+ * is set in the response.
+ */
 @ControllerAdvice
 class ResultResponseBodyAdvice: ResponseBodyAdvice<Result<HttpStatusCodeResultCase>> {
 
