@@ -1,6 +1,6 @@
-package de.reen28.cafloma.core.result
+package de.reen28.cafloma.external.core.result
 
-import de.reen28.cafloma.core.result.cases.HttpStatusCodeResultCase
+import de.reen28.cafloma.external.core.result.cases.HttpStatusCodeResultCase
 import org.springframework.core.MethodParameter
 import org.springframework.http.MediaType
 import org.springframework.http.converter.HttpMessageConverter

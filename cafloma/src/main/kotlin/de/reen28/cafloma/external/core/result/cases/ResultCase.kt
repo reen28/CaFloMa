@@ -1,4 +1,4 @@
-package de.reen28.cafloma.core.result.cases
+package de.reen28.cafloma.external.core.result.cases
 
 /**
  * A base interface representing a generic result case, either a success or an error.

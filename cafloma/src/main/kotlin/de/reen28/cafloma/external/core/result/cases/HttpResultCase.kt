@@ -1,4 +1,4 @@
-package de.reen28.cafloma.core.result.cases
+package de.reen28.cafloma.external.core.result.cases
 
 import org.springframework.http.HttpStatus
 import org.springframework.http.HttpStatusCode
