@@ -1,8 +1,8 @@
-package de.reen28.cafloma.core.result
+package de.reen28.cafloma.external.core.result
 
-import de.reen28.cafloma.core.result.cases.ErrorResultCase
-import de.reen28.cafloma.core.result.cases.ResultCase
-import de.reen28.cafloma.core.result.cases.SuccessResultCase
+import de.reen28.cafloma.external.core.result.cases.ErrorResultCase
+import de.reen28.cafloma.external.core.result.cases.ResultCase
+import de.reen28.cafloma.external.core.result.cases.SuccessResultCase
 
 /**
  * A generic class that represents a result, either a success or an error, based on the [ResultCase] provided.

@@ -1,4 +1,4 @@
-package de.reen28.cafloma.core.result.cases
+package de.reen28.cafloma.external.core.result.cases
 
 /**
  * Represents an error result case that extends [ResultCase].

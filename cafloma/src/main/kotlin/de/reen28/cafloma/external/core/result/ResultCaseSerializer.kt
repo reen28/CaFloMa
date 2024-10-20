@@ -1,4 +1,4 @@
-package de.reen28.cafloma.core.result
+package de.reen28.cafloma.external.core.result
 
 import com.fasterxml.jackson.core.JsonGenerator
 import com.fasterxml.jackson.databind.JsonSerializer
