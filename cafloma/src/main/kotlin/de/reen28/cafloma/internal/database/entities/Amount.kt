@@ -1,4 +1,4 @@
-package de.reen28.cafloma.internal.database
+package de.reen28.cafloma.internal.database.entities
 
 import jakarta.persistence.Embeddable
 

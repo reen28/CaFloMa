@@ -1,6 +1,6 @@
 package de.reen28.cafloma.internal.database.audit
 
-import de.reen28.cafloma.internal.database.User
+import de.reen28.cafloma.internal.database.entities.User
 import org.springframework.data.domain.AuditorAware
 import org.springframework.stereotype.Component
 import java.util.*

@@ -1,20 +1,20 @@
-package de.reen28.cafloma.internal.database
+package de.reen28.cafloma.internal.database.entities
 
 import de.reen28.cafloma.internal.database.audit.Auditable
 import jakarta.persistence.*
-import java.util.*
+import java.time.LocalDateTime
+import java.util.UUID
 
 @Entity
-data class Budget(
+data class Transaction(
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     var uuid: UUID,
     val name: String,
     val description: String?,
     @Embedded
-    val limit: Amount,
-    @Embedded
-    val frequency: Frequency,
+    val amount: Amount,
+    val executedAt: LocalDateTime,
 
     // other table references
     @ManyToOne
